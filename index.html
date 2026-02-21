@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Imandar Award Certificate</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="card" id="q1">
+
+<h1 class="gold">Imandari Verification</h1>
+
+<p class="goldText">
+क्या आप ईमानदार और अच्छे इंसान हैं?
+</p>
+
+<button onclick="showReady()">YES</button>
+
+<button id="noBtn">NO</button>
+
+</div>
+
+
+<div class="card hidden" id="ready">
+
+<h2 class="goldText">
+Most Imandar Award लेने के लिए तैयार हैं?
+</h2>
+
+<button onclick="showQR()">YES</button>
+
+<button id="noBtn2">NO</button>
+
+</div>
+
+
+<div class="card hidden" id="payment">
+
+<h2 class="goldText">Certificate unlock fee ₹30</h2>
+
+<a id="upiLink">
+
+<img src="paytmQR.jpeg" class="qr">
+
+</a>
+
+<p class="goldText">Tap QR to pay</p>
+
+<button onclick="paid()">I HAVE PAID</button>
+
+</div>
+
+
+<div class="card hidden" id="nameBox">
+
+<h2 class="goldText">Enter your name</h2>
+
+<input type="text" id="userName">
+
+<button onclick="generateCert()">Generate Certificate</button>
+
+</div>
+
+
+<div class="card hidden" id="certBox">
+
+<canvas id="canvas" width="900" height="600"></canvas>
+
+<br>
+
+<button onclick="downloadCert()">Download Certificate (.jpg)</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
